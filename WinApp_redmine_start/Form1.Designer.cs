@@ -47,7 +47,7 @@
             // 
             // textBox_redmine_installpath
             // 
-            this.textBox_redmine_installpath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.textBox_redmine_installpath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_redmine_installpath.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox_redmine_installpath.Location = new System.Drawing.Point(12, 33);
@@ -74,7 +74,9 @@
             this.button_selectDir.Name = "button_selectDir";
             this.button_selectDir.Size = new System.Drawing.Size(43, 28);
             this.button_selectDir.TabIndex = 7;
+            this.button_selectDir.Text = "...";
             this.button_selectDir.UseVisualStyleBackColor = true;
+            this.button_selectDir.Click += new System.EventHandler(this.button_selectDir_Click);
             // 
             // Form1
             // 

@@ -131,5 +131,36 @@ namespace WinApp_redmine_start
             Process.Start(path);
 
         }
+
+        private void button_selectDir_Click(object sender, EventArgs e)
+        {
+            string path = GetPath();
+
+            if (!string.IsNullOrEmpty(path))
+            {
+                textBox_redmine_installpath.Text = path;
+            }
+        }
+
+        private string GetPath()
+        {
+            string path = string.Empty;
+
+            using (FolderBrowserDialog dlg = new FolderBrowserDialog())
+            {
+                dlg.SelectedPath = @"c:\";
+                dlg.Description = "Redmineがインストールされたパス";
+                dlg.ShowNewFolderButton = false;
+
+                DialogResult result = dlg.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    path = dlg.SelectedPath;
+                }
+            }
+
+            return path;
+        }
+
     }
 }
